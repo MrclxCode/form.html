@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Registrasi</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 30px; }
+    h2 { margin-bottom: 15px; }
+    fieldset { max-width: 620px; margin-bottom: 15px; padding: 20px 15px; }
+    legend { font-weight: bold; padding: 0 5px; }
+    table.form-table { border-collapse: collapse; width: 80%; }
+    table.form-table td { padding: 4px 5px; vertical-align: top; }
+    td.label { width: 35%; white-space: nowrap; }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="url"],
+    select,
+    textarea { width: 95%; box-sizing: border-box; }
+    .skill-list label { margin-right: 10px; white-space: nowrap; }
+    .btn-row { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Form Registrasi</h2>
+
+  <form action="" method="post">
+
+    <!-- Fieldset Biodata -->
+    <fieldset>
+      <legend>Biodata</legend>
+      <table class="form-table">
+        <tr>
+          <td class="label">Nama Mahasiswa</td>
+          <td>:</td>
+          <td><input type="text" name="nama" placeholder="Nama Anda" required></td>
+        </tr>
+        <tr>
+          <td class="label">No Induk Mahasiswa (NIM)</td>
+          <td>:</td>
+          <td><input type="text" name="nim" placeholder="123456789" required></td>
+        </tr>
+        <tr>
+          <td class="label">Alamat Mahasiswa</td>
+          <td>:</td>
+          <td><textarea name="alamat" rows="3" placeholder="Alamat Anda"></textarea></td>
+        </tr>
+        <tr>
+          <td class="label">Tanggal Lahir</td>
+          <td>:</td>
+          <td>
+            <select name="tgl_lahir">
+              <option>01</option><option>02</option><option>03</option>
+              <option>...</option><option>31</option>
+            </select>
+            <select name="bulan_lahir">
+              <option>Januari</option><option>Februari</option><option>Maret</option>
+              <option>...</option><option>Desember</option>
+            </select>
+            <select name="tahun_lahir">
+              <option>1990</option><option>1995</option><option>2000</option>
+              <option>...</option><option>2008</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Jenis Kelamin</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="jenis_kelamin" value="pria" id="pria" checked><label for="pria">Pria</label>
+            <input type="radio" name="jenis_kelamin" value="wanita" id="wanita"><label for="wanita">Wanita</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Upload Foto</td>
+          <td>:</td>
+          <td><input type="file" name="foto"></td>
+        </tr>
+        <tr>
+          <td class="label">URL Website</td>
+          <td>:</td>
+          <td><input type="url" name="website" placeholder="URL Website Anda"></td>
+        </tr>
+        <tr>
+          <td class="label">Perguruan Tinggi</td>
+          <td>:</td>
+          <td><input type="text" name="perguruan_tinggi"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Fieldset Info Akun -->
+    <fieldset>
+      <legend>Info Akun</legend>
+      <table class="form-table">
+        <tr>
+          <td class="label">Email</td>
+          <td>:</td>
+          <td><input type="email" name="email" placeholder="Email Anda" required></td>
+        </tr>
+        <tr>
+          <td class="label">Username</td>
+          <td>:</td>
+          <td><input type="text" name="username" placeholder="Username Anda" required></td>
+        </tr>
+        <tr>
+          <td class="label">Password</td>
+          <td>:</td>
+          <td><input type="password" name="password" placeholder="Password Anda" required></td>
+        </tr>
+        <tr>
+          <td class="label">Ulangi Password</td>
+          <td>:</td>
+          <td><input type="password" name="ulangi_password" placeholder="Password Anda" required></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Fieldset Kemampuan Dasar -->
+    <fieldset>
+      <legend>Kemampuan Dasar</legend>
+      <div class="skill-list">
+        <input type="checkbox" name="skill[]" value="HTML" id="skill_html"><label for="skill_html">HTML</label>
+        <input type="checkbox" name="skill[]" value="CSS" id="skill_css"><label for="skill_css">CSS</label>
+        <input type="checkbox" name="skill[]" value="Javascript" id="skill_js"><label for="skill_js">Javascript</label>
+        <input type="checkbox" name="skill[]" value="PHP" id="skill_php"><label for="skill_php">PHP</label>
+        <input type="checkbox" name="skill[]" value="MySQL" id="skill_mysql"><label for="skill_mysql">MySQL</label>
+        <input type="checkbox" name="skill[]" value="Laravel" id="skill_laravel"><label for="skill_laravel">Laravel</label>
+        <input type="checkbox" name="skill[]" value="React Native" id="skill_rn"><label for="skill_rn">React Native</label>
+      </div>
+    </fieldset>
+
+    <div class="btn-row">
+      <input type="reset" value="Reset">
+      <input type="submit" value="Simpan">
+      <input type="button" value="Button" onclick="">
+    </div>
+
+  </form>
+</body>
+</html>
